@@ -1,0 +1,312 @@
+/* Google Font Import (add in HTML head) */
+/* <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f0f, #1a0000, #000000);
+  min-height: 100vh;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow-x: hidden;
+}
+
+/* Container */
+.box {
+  text-align: center;
+  width: 100%;
+}
+
+/* Title */
+.title {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+
+}
+
+/* Search Section */
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+
+}
+
+/* Input */
+.search-box input {
+  padding: 12px 15px;
+  width: 280px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.search-box input::placeholder {
+  color: #ccc;
+}
+
+.search-box input:focus {
+  border: 1px solid #ffffff;
+}
+
+/* Button */
+.search-box button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #e50914, #b20710);
+  color: white;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Movie Grid */
+#movieContainer {
+  width: 100%;
+  max-width: 1200px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+
+  padding: 20px;
+}
+
+/* Movie Card */
+.movieCard {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+  padding-bottom: 10px;
+}
+
+
+.movieCard:hover h3 {
+  color: #4facfe;
+}
+
+.movieCard:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.movieCard img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.movieCard h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.movieCard p {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  margin-left: 20px;
+  background: rgba(79, 172, 254, 0.2);
+  color: #ffffff;
+}
+
+/* Movie Details */
+/* Container */
+.movieDetails {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+
+  display: flex;
+  gap: 30px;
+
+  background: linear-gradient(145deg, #141414, #1c1c1c);
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+/* Poster */
+.movieDetails img {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.content h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Meta row */
+.meta {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.meta span {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Rating highlight */
+.rating {
+  color: #46d369;
+  font-weight: 600;
+}
+
+/* Plot */
+.plot {
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 15px;
+}
+
+/* Play button */
+.playBtn {
+  background: #e50914;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.playBtn:hover {
+  background: #f6121d;
+}
+
+/* Back button */
+.backBtn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.backBtn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.watchBtn {
+  display: inline-block;
+  margin: 5px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* 🔥 Hover effect */
+.watchBtn:hover {
+  background: #e50914;
+  color: white;
+  transform: scale(1.05);
+}
+
+.watch a {
+  text-decoration: none;
+  /* ❌ underline remove */
+  color: white;
+  /* ❌ blue remove */
+}
+
+.ott {
+  margin-top: 10px;
+}
+
+.ott p {
+  margin-bottom: 5px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.ottLogo {
+  height: 20px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .movieDetails {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .movieDetails img {
+    width: 200px;
+    margin: auto;
+  }
+
+  .meta {
+    justify-content: center;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+}
